@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="../../favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <?php
+    $db = mysqli_connect('hostname','username','password','databasename');
+    ?>
+    <script type="text/JavaScript" src="template.js"></script>
+    <body>
+<% if(typeof firstname !== "undefined") { %>
+Welcome, <%= firstname %>
+<% } %>

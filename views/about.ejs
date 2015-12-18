@@ -1,0 +1,57 @@
+<meta charset="utf-8"/>
+<title>Home</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+<link rel="icon" href="../../favicon.ico"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<?php
+    $db = mysqli_connect('hostname','username','password','databasename');
+    ?>
+<script type="text/JavaScript" src="template.js"></script>
+</head>
+
+<body style="background-color:slategray">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/account">Home</a></li>
+                <li><a href="/account/about">About</a></li>
+                <li><a href="/cart">Cart</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<h1>About The Website</h1>
+<p> My database is would allow people to create an account and buy eBooks in any format they want depending
+    on the e-reader they have or they could get a hard copy of the books through the website as well.
+    This is an online store similar to Amazon’s KDP store, but instead it will be solely about my book
+    as well as other people that would like their books to be read by millions of people as well.
+    Currently my book is uploaded on Amazon but with this website I would be able to advertise better as well as allow
+    other people to advertise their own books. I would be able to reach more people this way.
+    Right now this database is only about online store transaction.
+    Later I will be able to add more stuff to this database. This database has constraints that will not allow people to
+    just get any product. The constraints are as follows: A person can’t order books without creating an account first.
+    They won’t get the order without making a payment transaction first. They can only order books that are being offered
+    and are able to choose from a category of the format of the book or e-book. In order to make the purchase the order
+    must be placed in a cart first and then proceed if the person is done shopping. </p>
+<h3>Contact</h3>
+<p>email: example@gmail.com<br>
+phone: (707)555-6666</p>

@@ -1,0 +1,72 @@
+<meta charset="utf-8"/>
+<title>Home</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+<link rel="icon" href="../../favicon.ico"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<?php
+    $db = mysqli_connect('hostname','username','password','databasename');
+    ?>
+<script type="text/JavaScript" src="template.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body style="background-color:slategray">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+
+                <li><a href="/login">Signin</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<form>
+    User name:<br>
+    <input type="text" name="username">
+    <br>
+    Password:<br>
+    <input type="password" name="psw">
+    <br>
+    Confirm password:<br>
+    <input type="password" name="psw">
+    <label for="foundBy">How did you hear about us?</label><br />
+    <select id="foundby_id" name="foundby_id" class="form-control"></select>
+</form>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Check me out
+        </label>
+    </div>
+
+</form>
+
+<form>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+    <br>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<script src="/js/foundby.js"></script>
+
+</body>
+</html>
