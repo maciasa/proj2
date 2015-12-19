@@ -14,7 +14,7 @@
 <script type="text/JavaScript" src="template.js"></script>
 </head>
 
-<body style="background-color:slategray">
+<body style="background-color:silver">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -49,11 +49,10 @@
 
         <% for (var i=0; rs.length > i; i++) { %>
         <tr>
-            <td><a href="/orderdetail/?orderdetail_id=<%= rs[i].orderdetail_id%>">
-                    <%= rs[i].lname %><%= rs[i].fname %></a></td>
-            <td><a href="/orderdetail/?orderdetail_id=<%= rs[i].orderdetail_id%>"><%= rs[i].ordernumber%></a></td>
-            <td><a href="/orderdetail/?orderdetail_id=<%= rs[i].orderdetail_id%>"><%= rs[i].productprice %></a></td>
-            <td><a href="/orderdetail/?orderdetail_id=<%= rs[i].orderdetail_id%>"><%= rs[i].total %></a></td>
+            <td><%= rs[i].lname %><%= rs[i].fname %></td>
+            <td><%= rs[i].ordernumber%></td>
+            <td><%= rs[i].productprice %></td>
+            <td><%= rs[i].total %></td>
         </tr>
 
         <% } %>

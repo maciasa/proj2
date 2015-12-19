@@ -14,7 +14,7 @@
 <script type="text/JavaScript" src="template.js"></script>
 </head>
 
-<body style="background-color:slategray">
+<body style="background-color:silver">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -48,10 +48,9 @@
 
         <% for (var i=0; rs.length > i; i++) { %>
         <tr>
-            <td><a href="/orders/?order_id=<%= rs[i].order_id%>">
-                    <%= rs[i].ordernumber %></a></td>
-            <td><a href="/orders/?order_id=<%= rs[i].order_id%>"><%= rs[i].orderdate%></a></td>
-            <td><a href="/orders/?order_id=<%= rs[i].order_id%>"><%= rs[i].paytype %></a></td>
+            <td><%= rs[i].ordernumber %></td>
+            <td><%= rs[i].orderdate%></td>
+            <td><%= rs[i].paytype %></td>
         </tr>
 
         <% } %>

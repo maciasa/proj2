@@ -4,8 +4,7 @@ var db  = require('./db_connection.js');
 var connection = mysql.createConnection(db.config);
 
 exports.Getorders = function(callback) {
-    connection.query ('select orders.order_id, orders.ordernumber, orders.orderdate, payment.paytype from orders join payment' +
-        'on payment.pay_id = orders.pay_id;',
+    connection.query ('select p1.pay_id, o1.ordernumber, o1.orderdate, p1.paytype from payment p1 join orders o1 ON p1.pay_id = o1.pay_id;',
         function (err, result) {
             if(err) {
                 console.log(err);

@@ -14,7 +14,7 @@
 <script type="text/JavaScript" src="template.js"></script>
 </head>
 
-<body style="background-color:slategray">
+<body style="background-color:silver">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -41,18 +41,24 @@
     <% if(rs.length > 0) { %>
     <table border="1" class="table table-striped">
         <tr><th>Category Name</th>
-            <th>ebook info</th>
-            <th>job description</th></tr>
+            <th>Code</th>
+            <th>Ebook</th>
+            <th>Image</th>
+            <th>Decription</th>
+            <th>Price</th>
+        </tr>
 
 
 
         <% for (var i=0; rs.length > i; i++) { %>
         <tr>
-            <td><a href="/product/?product_id=<%= rs[i].product_id%>">
-                    <%= rs[i].cname %></a></td>
-            <td><a href="/product/?product_id=<%= rs[i].product_id%>"><%= rs[i].picture %><%= rs[i].pname %>
-                    <%= rs[i].descript %><%= rs[i].picture %><%= rs[i].price %>
-            <td><a href="/product/?product_id=<%= rs[i].product_id%>"><%= rs[i].descript %></a></td>
+            <td><%= rs[i].cname %></td>
+            <td><%= rs[i].productcode %></td>
+            <td><%= rs[i].productname %></td>
+            <td><img src="/images"  style="width:304px;height:228px;"><%= rs[i].picture %></td>
+            <td><%= rs[i].description %></td>
+            <td><%= rs[i].price %></td>
+
 
         </tr>
 
